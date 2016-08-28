@@ -32,7 +32,10 @@ def max_employment(employment):
     Try using the Pandas argmax() function. Documention is
     here: http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.argmax.html
     '''
-    max_country = None      # Replace this with your code
-    max_value = None   # Replace this with your code
 
+    indexOfMaximumNumber = employment.argmax()
+    max_country = employment.argmax()    # Replace this with your code
+    max_value = employment[max_country]   # Replace this with your code
     return (max_country, max_value)
+
+max_employment(employment)
