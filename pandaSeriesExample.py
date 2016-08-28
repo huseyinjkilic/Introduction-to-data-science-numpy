@@ -46,4 +46,16 @@ def reverse_names(names):
     
     Try to use the Pandas apply() function rather than a loop.
     '''
-    return None
+    temp_names = names.split(' ')
+    second_temp = ''
+    count = 0
+    for temp_name in  reversed(temp_names):
+        if count == 1:
+            second_temp += ' '
+        count +=1
+        second_temp += temp_name
+
+    print second_temp
+    return temp_name
+
+names.apply(reverse_names)
