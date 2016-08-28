@@ -1,8 +1,8 @@
-import csv
+import unicodecsv
 
 def read_csv(filename):
     with open(filename, 'rb') as f:
-        reader = csv.DictReader(f)
+        reader = unicodecsv.DictReader(f)
         return list(reader)
 
 daily_engagement = read_csv('daily_engagement.csv')
