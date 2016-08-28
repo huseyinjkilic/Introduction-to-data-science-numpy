@@ -26,11 +26,18 @@ employment = np.array([
 country_name = 'United States'
 
 def standardize_data(values):
-    '''
-    Fill in this function to return a standardized version of the given values,
-    which will be in a NumPy array. Each value should be translated into the
-    number of standard deviations that value is away from the mean of the data.
-    (A positive number indicates a value higher than the mean, and a negative
-    number indicates a value lower than the mean.)
-    '''
-    return None
+
+    mean = np.mean(values)
+    deviation = np.std(values)
+
+    print mean
+    print deviation
+    print values
+
+    newList = []
+    for value in values:
+        newList.append((value - mean) / deviation)
+
+    print newList
+
+standardize_data(employment)
