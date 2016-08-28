@@ -53,19 +53,25 @@ if False:
                 country_employment)
 
 # Numpy functions
-if True:
+if False:
     print employment.mean()
     print employment.std()
     print employment.max()
     print employment.sum()
 
 def max_employment(countries, employment):
-    '''
-    Fill in this function to return the name of the country
-    with the highest employment in the given employment
-    data, and the employment in that country.
-    '''
-    max_country = None      # Replace this with your code
-    max_value = None   # Replace this with your code
 
+    max_country = None      # Replace this with your code
+    max_value = 0  # Replace this with your code
+
+    for i in range(len(countries)):
+        country = countries[i]
+        country_employment = employment[i]
+        print 'Country {} has employment {}'.format(country,
+                country_employment)
+        if country_employment > max_value:
+            max_value = country_employment
+            max_country = country
     return (max_country, max_value)
+
+max_employment(countries, employment)
