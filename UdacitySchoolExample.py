@@ -3,7 +3,7 @@ import numpy as np
 # Change False to True for each block of code to see what it does
 
 # Arithmetic operations between 2 NumPy arrays
-if True:
+if False:
     a = np.array([1, 2, 3, 4])
     b = np.array([1, 2, 1, 2])
     
@@ -88,10 +88,5 @@ male_completion = np.array([
 ])
 
 def overall_completion_rate(female_completion, male_completion):
-    '''
-    Fill in this function to return a NumPy array containing the overall
-    school completion rate for each country. The arguments are NumPy
-    arrays giving the female and male completion of each country in
-    the same order.
-    '''
-    return None
+    return (female_completion + male_completion) / 2;
+
