@@ -34,15 +34,17 @@ if False:
     print a + b
 
 def mean_riders_for_max_station(ridership):
-  yes  '''
-    Fill in this function to find the station with the maximum riders on the
-    first day, then return the mean riders per day for that station. Also
-    return the mean ridership overall for comparsion.
-    
-    Hint: NumPy's argmax() function might be useful:
-    http://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html
-    '''
-    overall_mean = None # Replace this with your code
+
+
+    count = 0
+    total = 0
+    for riderships in ridership:
+        for riderss in riderships:
+            count += 1
+            total += riderss
+
+    overall_mean = total / count
+
     mean_for_max = None # Replace this with your code
     
     return (overall_mean, mean_for_max)

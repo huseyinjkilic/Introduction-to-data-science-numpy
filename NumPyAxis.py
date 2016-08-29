@@ -36,7 +36,16 @@ def min_and_max_riders_per_day(ridership):
     mean-ridership-per-day and the minimum mean-ridership-per-day for any
     subway station.
     '''
-    max_daily_ridership = None     # Replace this with your code
-    min_daily_ridership = None     # Replace this with your code
+
+    a = np.array([
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ])
+
+    max_daily_ridership = ridership.max(axis=1)     # Replace this with your code
+    min_daily_ridership = ridership.min(axis=1)     # Replace this with your code
     
     return (max_daily_ridership, min_daily_ridership)
+
+min_and_max_riders_per_day(ridership)
