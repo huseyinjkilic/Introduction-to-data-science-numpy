@@ -37,7 +37,8 @@ def standardize(df):
     number of standard deviations it is above or below the mean.
     '''
 
-    df_norm = (df-df.mean()) / (df.max()-df.min())
+    df_norm = (df-df.mean()) / (df.std())
+    print df_norm
     return df_norm
 
 standardize(grades_df)
