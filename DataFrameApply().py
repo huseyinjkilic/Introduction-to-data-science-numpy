@@ -36,4 +36,8 @@ def standardize(df):
     DataFrame. To standardize a variable, convert each value to the
     number of standard deviations it is above or below the mean.
     '''
-    return None
+
+    df_norm = (df-df.mean()) / (df.max()-df.min())
+    return df_norm
+
+standardize(grades_df)
