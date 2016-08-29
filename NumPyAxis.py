@@ -43,8 +43,8 @@ def min_and_max_riders_per_day(ridership):
         [7, 8, 9]
     ])
 
-    max_daily_ridership = ridership.max(axis=1)     # Replace this with your code
-    min_daily_ridership = ridership.min(axis=1)     # Replace this with your code
+    max_daily_ridership = max(ridership.max(axis=1))     # Replace this with your code
+    min_daily_ridership = min(ridership.min(axis=1))     # Replace this with your code
     
     return (max_daily_ridership, min_daily_ridership)
 
