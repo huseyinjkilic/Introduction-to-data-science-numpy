@@ -37,4 +37,7 @@ def get_hourly_entries_and_exits(entries_and_exits):
     return a DataFrame with hourly entries and exits (entries in the
     first column, exits in the second).
     '''
-    return None
+
+    return entries_and_exits - entries_and_exits.shift(1)
+
+get_hourly_entries_and_exits(entries_and_exits)
