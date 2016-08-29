@@ -35,4 +35,18 @@ def convert_grades(grades):
         60-69  -> D
         0-59   -> F
     '''
-    return None
+
+    def convert_grade(grade):
+        if grade >= 90:
+            return 'A'
+        elif grade >= 80 and grade <90:
+            return 'B'
+        elif grade >= 70 and grade < 80:
+            return 'C'
+        elif grade >= 60 and grade < 70:
+            return 'D'
+        else:
+            return 'F'
+    return grades.applymap(convert_grade)
+
+convert_grades(grades_df)
